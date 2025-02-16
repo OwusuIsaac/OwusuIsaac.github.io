@@ -1,16 +1,113 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <title> My Website </title>
-        <link rel = "stylesheet" href = "index.css">
-    </head>
-    <body>
-        <header>30 Minutes Film Festival</header>
-        <input type = "search"> video </input>
-        <video width="620" height="540" controls>
-            <source src="commsVideo.mp4" type="video/mp4">
-            Video not supported.
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>30 Minute Film Festival</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <!-- Header Section -->
+  <div class="top-bar">
+    <h1>30 Minute Film Festival</h1>
+  </div>
+
+  <!-- Logo Section -->
+  <div class="logo-bar">
+    <img src="logo.png" alt="Film Festival Logo" class="logo" />
+  </div>
+
+  <!-- Main Content Container -->
+  <div class="main-container">
+    <!-- Left Section: Video Player, Film Info, and Comments -->
+    <div class="left-section">
+      <!-- Responsive Video Wrapper (16:9 Aspect Ratio) -->
+      <div class="video-wrapper">
+        <video id="main-video" controls>
+          <source src="commsVideo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
-        <footer>Isaac Owusu Copyright</footer>
-    </body>
+      </div>
+
+      <!-- Video Info and Action Buttons -->
+      <div class="video-info-bar">
+        <h2 id="video-title">Forgiveness</h2>
+        <div class="video-actions">
+          <button id="like-btn">👍 Like</button>
+          <button id="dislike-btn">👎 Dislike</button>
+          <button id="subscribe-btn">🔴 Subscribe</button>
+        </div>
+      </div>
+
+      <!-- Video Description -->
+      <div id="video-description">
+        <p>
+          Isaac and Mustafa have been at odds for a long time. One day, Isaac accidentally leaves his wallet on a bench, 
+          and it happens to be Mustafa who finds it. Recognizing the wallet as Isaac’s, Mustafa hesitates—part of him wants 
+          to walk away, but another part contemplates doing the right thing.
+        </p>
+        <p>
+          Meanwhile, Isaac goes to a grocery store to buy a small item. At the register, he realizes his wallet is missing. 
+          Embarrassed and worried, Isaac promises the cashier he will return with money once he finds it. As he searches 
+          outside, Mustafa sees Isaac frantically looking around. In that moment, Mustafa decides to set aside their feud. 
+          He approaches Isaac, returns his wallet, and in doing so, extends an olive branch of forgiveness.
+        </p>
+      </div>
+
+      <!-- Film Information and Cast & Crew -->
+      <div class="film-info">
+        <h2>About the Film</h2>
+        <p>
+          <strong>Forgiveness</strong> is a heartwarming short film that follows two childhood friends, Isaac and Mustafa, 
+          who have been estranged by a past feud. When a lost wallet brings them together again, they must confront their 
+          differences and discover the power of compassion.
+        </p>
+        <p>
+          The film is a moving exploration of the transformative nature of forgiveness. It reminds us that even in the midst 
+          of conflict, there is always an opportunity for reconciliation and healing. Through sincere performances and a thoughtful 
+          narrative, "Forgiveness" challenges us to embrace empathy and extend grace in our own lives. The journey of these two friends 
+          serves as a beacon of hope, illustrating that even the deepest wounds can be healed when we open our hearts to understanding.
+        </p>
+        <h2>Cast &amp; Crew</h2>
+        <ul>
+          <li><strong>Isaac Owusu</strong> as Isaac</li>
+          <li><strong>Mustafa Bakir</strong> as Mustafa</li>
+          <li><strong>Jane Smith</strong> – Director</li>
+          <li><strong>Alex Carter</strong> – Producer</li>
+        </ul>
+      </div>
+
+      <!-- Comments Section -->
+      <div class="comments-section">
+        <h3>Comments</h3>
+        <textarea id="comment-input" placeholder="Add a comment..."></textarea>
+        <button onclick="addComment()">Post</button>
+        <div id="comments-list"></div>
+      </div>
+    </div>
+
+    <!-- Right Section: Video Search and List -->
+    <aside class="right-section">
+      <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search videos..." />
+        <button id="search-btn">Search</button>
+      </div>
+      <p class="search-hint">Type a video's title or part of it and press "Search" to highlight it in the list below.</p>
+      <h3>More Videos</h3>
+      <ul id="video-list">
+        <li onclick="playVideo('commsVideo.mp4', 'Forgiveness', 'A short film about two estranged friends rediscovering compassion.')">
+          Forgiveness
+        </li>
+      </ul>
+      <p id="search-message"></p>
+    </aside>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    © 2025 Isaac Owusu | 30 Minute Film Festival
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
