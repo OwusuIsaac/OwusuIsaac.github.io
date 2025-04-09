@@ -1,2 +1,21 @@
-# Sound_project
- 
+# Game Time: A Basketball Sound Journey
+
+## Project Description
+
+**Game Time** is an interactive web-based sound piece that transports the listener courtside for a full basketball experience, from warm-up to final buzzer. As a team of two, we set out to explore how sound and interactivity could come together to tell a story without visuals or dialogue-driven narrative. Our theme centers on the atmosphere of a basketball game—the rhythm of the bounce, the echo of sneakers, the energy of the crowd, and the flow of play between teammates. The journey begins with a player arriving on the court, warming up with dribbles and layups. A coach offers advice and encouragement as tension builds. As the game tips off, the court erupts with life: fast-paced play, sharp passes, crowd reactions, and the intensity of gameplay. Eventually, the whistle blows, the soundscape winds down, and we are left with the aftermath of a hard-fought match.
+
+To complement the audio, we designed an interactive court-themed web page. Users can click on different parts of the court to trigger either a bouncing animation or a shooting motion from the basketball, depending on where they click. This interaction reinforces the auditory story and offers a playful way to engage with the piece. The site uses ambient background visuals and stylized text to support the energy and tone of the audio, creating an immersive digital space that captures the feel of being in the middle of the action.
+
+## Process
+
+We began by brainstorming how we could represent the energy and pacing of a basketball game entirely through sound. From the start, we knew that we wanted the experience to be non-verbal but still highly expressive. We recorded a collection of original audio clips using our own gear, including basketball bounces, shoe squeaks, voice acting for the coach, and subtle background interactions like high fives and cheers. Once we had our base sounds, we mixed and layered them using audio editing tools, adding reverb and spatialization to mimic the acoustics of a gym or arena. We also sourced crowd noise and game ambiance from open libraries to build a rich background environment.
+
+With the audio taking shape, we designed and developed the webpage that would house the experience. The interface was designed to be minimal yet responsive, featuring a basketball court image as the main visual and an animated basketball that users could interact with. We used HTML, CSS, and JavaScript to create smooth transitions and intuitive interactions. The basketball reacts differently based on where the user clicks, providing immediate visual feedback. We added a play/pause button for the soundtrack, layered an overlay to keep focus on the interaction area, and styled the typography to feel modern and sporty. The page includes a small tip to help guide users toward the shooting feature without requiring detailed instructions, keeping the experience fluid and exploratory.
+
+## Reflection / Evaluation
+
+This project was a great opportunity for us to collaborate creatively, combining sound design with interactive storytelling. We’re really proud of how immersive the final piece feels, especially considering how much of the narrative is carried by audio alone. The interplay between the website and the soundscape was one of the most satisfying aspects to bring to life, especially once the animations began to match the overall tone of the game. We worked hard to ensure the experience was both intuitive and engaging for the user, and we believe the end result delivers a strong sense of motion and energy.
+
+Throughout the process, we learned a lot about balancing technical constraints with artistic goals. Making the sounds feel real and dynamic took many revisions and careful layering, and developing a website that enhances rather than distracts from the soundscape took thoughtful planning. As a team, we felt our strengths complemented each other well—we collaborated on the sound editing, divided responsibilities for web development, and constantly checked in to make sure the audio and visuals felt unified.
+
+If we were to continue refining the project, we’d explore adding more dynamic responses to user actions, such as triggering different sound effects when clicking during various parts of the audio timeline, or creating a sequence of plays that evolve as the user explores the court. We’d also consider incorporating visual feedback for scoring or crowd reactions. Overall, we feel like we met our initial goals and even expanded them as the project progressed. The final product reflects the energy and collaboration that went into it—and most importantly, it’s fun.
