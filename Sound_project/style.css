@@ -1,0 +1,145 @@
+/* Reset and Box-Sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Full-Screen Background with Crowd Image */
+  body {
+    background: url('crowd5.png') center/cover no-repeat;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  /* Semi-Transparent Overlay for Readability */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  
+  /* Heading Styles */
+  h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    color: #f5b400;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  p.description {
+    max-width: 700px;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Court Area */
+  .court {
+    background: url('basketball4.jpg') center/cover no-repeat;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  /* Dark Transparent Overlay Inside Court */
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    pointer-events: none; /* lets clicks through except button */
+  }
+  
+  /* Play Button Styling */
+  .play-button {
+    background-color: #f5b400;
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: black;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
+    z-index: 3;
+    pointer-events: auto;
+  }
+  
+  .play-button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Basketball Image */
+  .basketball {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png') center/contain no-repeat;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    transition: transform 1s ease-in-out;
+  }
+  
+  /* Bouncing Animation */
+  .bouncing {
+    animation: bounce 2s infinite ease-in-out;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-150px);
+    }
+  }
+  
+  /* Hide Audio Element */
+  audio {
+    display: none;
+  }
+  
+  /* Footer with Tip */
+  footer {
+    margin-top: 2rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .tip {
+    color: #fff;
+  }
+  

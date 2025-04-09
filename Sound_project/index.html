@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Time: A Basketball Sound Journey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Game Time</h1>
+
+  <p class="description">
+    Step onto the court and immerse yourself in the rhythm of a basketball game — the bounce, the calls, the crowd. 
+  </p>
+
+  <!-- Court Background with Basketball and Play Button -->
+  <div class="court" onclick="handleCourtClick(event)">
+    <div class="basketball" id="basketball"></div>
+    <div class="overlay">
+      <!-- Play/Pause Button for Sound -->
+      <button class="play-button" onclick="toggleAudio(event)">▶</button>
+    </div>
+  </div>
+
+  <!-- Audio Element -->
+  <audio id="basketball-audio" src="Sound_project.wav"></audio>
+
+ 
+  <footer>
+    <p class="tip">🏀 Tip: Click on the rim or backbaord to shoot. Click on the court to bounce the ball.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
