@@ -1,0 +1,249 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url('images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 130px;
+    padding: 10px 20px;
+    background: transparent;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    height: 80px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+nav img:hover {
+    transform: scale(1.2);
+}
+
+.nav-link.selected img {
+    transform: scale(1.4);
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 20px 20px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.home-image {
+    width: 100%;
+    max-width: 1070px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.about-content {
+    width: 100%;
+    max-width: 1070px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-content h1 {
+    font-size: 36px;
+    color: #2e7d32; 
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    font-size: 28px;
+    color: #c62828;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.contributions-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contributions-list li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contributions-list li strong {
+    color: #2e7d32; 
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    z-index: 2000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.question-box {
+    background: #3D90D7;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.option-box {
+    margin-top: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.option-box button {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #9FB3DF;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.option-box button:hover {
+    background: #7f96c7;
+}
+
+.message-text {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 2000;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        gap: 30px;
+        justify-content: center;
+    }
+    
+    nav img {
+        height: 70px;
+    }
+    
+    .home-image, .about-content {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav img {
+        height: 60px;
+    }
+
+    .about-content {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .question-box {
+        font-size: 16px;
+    }
+
+    .option-box button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .message-text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    nav img {
+        height: 50px;
+    }
+
+    .question-container {
+        padding: 15px;
+    }
+
+    .question-box {
+        font-size: 14px;
+    }
+
+    .option-box button {
+        font-size: 14px;
+    }
+
+    .message-text {
+        font-size: 18px;
+    }
+}
